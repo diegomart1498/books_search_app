@@ -12,10 +12,11 @@ class HomePageBody extends StatelessWidget {
         future: booksProvider.getLastestBooks(),
         builder: (context, snapshot) {
           if (snapshot.hasData) {
-            final List<Book> firstTenBooks = snapshot.data!.sublist(0, 10);
+            final List<Book> firstTenBooks =
+                snapshot.data?.sublist(0, 10) ?? [];
             return BookCardSwiper(books: firstTenBooks);
           }
-          return const Align(child: CircularProgressIndicator());
+          return const BookCardSwiperShimmer();
         },
       ),
     );

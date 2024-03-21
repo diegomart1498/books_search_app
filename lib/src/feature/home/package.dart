@@ -24,3 +24,4 @@ part 'widgets/book_search_delegate.dart';
 part 'widgets/book_search_results.dart';
 part 'widgets/home_page_body.dart';
 part 'provider/book_provider.dart';
+part 'widgets/book_card_swiper_shimmer.dart';
