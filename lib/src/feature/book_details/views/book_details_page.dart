@@ -13,12 +13,8 @@ class BookDetailsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    loggwtf(isbn13);
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Detalles'),
-      ),
-      body: Align(child: Text(isbn13)),
+      body: BookDetailsBody(isbn13: isbn13),
     );
   }
 }

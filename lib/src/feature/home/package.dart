@@ -2,7 +2,7 @@ import 'dart:async';
 import 'package:books_search_app/src/configs/text_style_config.dart/text_style_ext.dart';
 import 'package:books_search_app/src/configs/ui_constants_config/duration_constants.dart';
 import 'package:books_search_app/src/feature/book_details/package.dart';
-import 'package:books_search_app/src/feature/home/repository/books_repository.dart';
+import 'package:books_search_app/src/repository/books_repository.dart';
 import 'package:card_swiper/card_swiper.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';

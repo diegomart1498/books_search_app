@@ -26,9 +26,12 @@ class BookCard extends StatelessWidget {
           borderRadius: BorderRadius.circular(UISize.p20),
           child: Stack(
             children: [
-              CustomCachedNetworkImage(
-                imageUrl: book.image,
-                borderRadius: BorderRadius.circular(UISize.p20),
+              Hero(
+                tag: book.isbn13,
+                child: CustomCachedNetworkImage(
+                  imageUrl: book.image,
+                  borderRadius: BorderRadius.circular(UISize.p20),
+                ),
               ),
               BookPriceTag(bookPrice: book.price),
             ],

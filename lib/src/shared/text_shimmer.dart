@@ -24,7 +24,7 @@ class TextShimmer extends StatelessWidget {
           color: Colors.amber,
         ),
         height: height ?? 20,
-        width: width ?? 200,
+        width: width ?? double.infinity,
       ),
     );
   }
