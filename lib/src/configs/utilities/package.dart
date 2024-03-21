@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:books_search_app/src/configs/toast_config/toast.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -9,3 +11,4 @@ part 'logger_utility.dart';
 part 'extensions/string_ext.dart';
 part 'page_transition_utility.dart';
 part 'internet_connection_checker.dart';
+part 'http_exception_override.dart';

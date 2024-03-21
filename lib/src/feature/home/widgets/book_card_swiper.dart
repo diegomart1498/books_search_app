@@ -1,31 +1,31 @@
 part of '../package.dart';
 
 class BookCardSwiper extends StatelessWidget {
-  const BookCardSwiper({super.key});
+  const BookCardSwiper({
+    required this.books,
+    super.key,
+  });
+
+  final List<Book> books;
 
   @override
   Widget build(BuildContext context) {
-    final double height = MediaQuery.of(context).size.height;
+    final Size size = MediaQuery.of(context).size;
+
     return SizedBox(
-      height: height * 0.8,
+      height: size.height * 0.8,
       child: Swiper(
-        itemCount: 5,
-        itemBuilder: (context, index) => Card(
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(UISize.p16),
-          ),
-          // margin: paddingH24,
-          child: Image.network(
-            'https://unblast.com/wp-content/uploads/2018/02/Front-View-Hardcover-Book-Mockup.jpg',
-            fit: BoxFit.cover,
-          ),
-        ),
+        itemCount: books.length,
+        layout: SwiperLayout.STACK,
+        itemWidth: size.width * 0.8,
+        itemHeight: size.height * 0.55,
+        itemBuilder: (context, index) => BookCard(book: books[index]),
         autoplayDelay: 8000,
         autoplay: true,
         outer: true,
-        pagination: const SwiperPagination(
+        pagination: SwiperPagination(
           builder: DotSwiperPaginationBuilder(
-            activeColor: Colors.purple,
+            activeColor: Colors.blue[600],
             color: Colors.grey,
             activeSize: UISize.p8,
             size: UISize.p8,

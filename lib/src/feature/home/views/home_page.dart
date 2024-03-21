@@ -12,14 +12,15 @@ class HomePage extends StatelessWidget {
         title: const Text('Books Search App'),
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () async => await showCustomSearch<String?>(
+              context: context,
+              delegate: BookSearchDelegate(),
+            ),
             icon: const Icon(Icons.search),
           ),
         ],
       ),
-      body: const Align(
-        child: BookCardSwiper(),
-      ),
+      body: const HomePageBody(),
     );
   }
 }

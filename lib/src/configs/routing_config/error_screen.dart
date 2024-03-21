@@ -16,7 +16,7 @@ class ErrorScreen extends StatelessWidget {
             if (error != null) Text(error.toString()),
             TextButton(
               onPressed: () => context.go(HomePage.route),
-              child: const Text('back'),
+              child: const Text('Back'),
             ),
           ],
         ),
