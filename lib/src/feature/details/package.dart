@@ -4,7 +4,7 @@ import 'package:books_search_app/src/feature/home/package.dart';
 import 'package:books_search_app/src/shared/package.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'models/book_details.dart';
+import 'models/book_details_model.dart';
 
 part 'views/book_details_page.dart';
 part 'widgets/book_details_body.dart';

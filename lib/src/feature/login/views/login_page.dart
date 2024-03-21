@@ -21,16 +21,9 @@ class _LoginPageState extends State<LoginPage> {
     final String email = key.getStringTrimmed('email');
     final String password = key.getStringTrimmed('password');
 
-    _showSnackBar('Correo: $email\nContraseña:$password');
+    final loginProvider = Provider.of<LoginProvider>(context, listen: false);
+    await loginProvider.onLogin(email: email, password: password);
     if (mounted) context.go(HomePage.route);
-  }
-
-  void _showSnackBar(String message) {
-    if (mounted) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text(message)),
-      );
-    }
   }
 
   @override

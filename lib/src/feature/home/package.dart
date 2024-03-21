@@ -12,7 +12,8 @@ import 'package:provider/provider.dart';
 
 import '../../configs/ui_constants_config/ui/ui.dart';
 import '../../shared/package.dart';
-import '../details/models/book_details.dart';
+import '../details/models/book_details_model.dart';
+import '../login/package.dart';
 import 'models/new_books_response_model.dart';
 
 part 'views/home_page.dart';

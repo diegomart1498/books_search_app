@@ -12,6 +12,11 @@ class HomePage extends StatelessWidget {
         title: const Text('Books Search App'),
         actions: [
           IconButton(
+            onPressed: () => Provider.of<LoginProvider>(context, listen: false)
+                .onLogOut(context),
+            icon: const Icon(Icons.logout_rounded),
+          ),
+          IconButton(
             onPressed: () async => await showCustomSearch<String?>(
               context: context,
               delegate: BookSearchDelegate(),

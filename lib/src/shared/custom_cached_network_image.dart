@@ -33,12 +33,6 @@ class CustomCachedNetworkImage extends StatelessWidget {
         errorWidget: (context, url, error) {
           logge('cachedNetworkImage -> $error - url -> $url');
           return const CircularProgressIndicator();
-          // return Image.asset(
-          //   placeholderImage ?? AssetImages.storeBackground,
-          //   width: width ?? double.infinity,
-          //   height: height ?? UISize.p144,
-          //   fit: BoxFit.cover,
-          // );
         },
       ),
     );
