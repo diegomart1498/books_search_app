@@ -338,7 +338,7 @@ class _CustomAppbarSearch extends StatelessWidget
                 ),
               ),
               hintText: delegate.hintText() ?? 'Buscar',
-              hintStyle: context.textStyles.subtitle1.medium.lightGrey,
+              hintStyle: context.textStyles.subtitle1.medium.grey,
             ),
           )
         ],

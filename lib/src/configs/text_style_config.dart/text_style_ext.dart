@@ -146,5 +146,5 @@ extension FontColor on TextStyle {
 
   TextStyle get white => copyWith(color: Colors.white);
 
-  TextStyle get lightGrey => copyWith(color: Colors.black54);
+  TextStyle get grey => copyWith(color: Colors.black54);
 }

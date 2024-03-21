@@ -5,11 +5,16 @@ final GlobalKey<NavigatorState> _rootNavigator = GlobalKey();
 GoRouter appRouter() {
   return GoRouter(
     navigatorKey: _rootNavigator,
-    initialLocation: HomePage.route,
+    initialLocation: LoginPage.route,
     routes: [
+      GoRoute(
+        path: LoginPage.route,
+        builder: (context, state) => const LoginPage(),
+      ),
       GoRoute(
         path: HomePage.route,
         builder: (context, state) => const HomePage(),
+        pageBuilder: fadePageBuilder(const HomePage()),
         routes: [
           GoRoute(
             path: BookDetailsPage.route,
