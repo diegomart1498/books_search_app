@@ -10,8 +10,10 @@ class BookDetailsBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final booksProvider = Provider.of<BooksProvider>(context, listen: false);
+
     return FutureBuilder<BookDetailsModel?>(
-      future: BooksRepository.getBookById(isbn13),
+      future: booksProvider.getBookById(isbn13),
       builder: (context, snapshot) {
         final BookDetailsModel? book = snapshot.data;
         return CustomScrollView(

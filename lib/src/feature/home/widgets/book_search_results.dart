@@ -19,7 +19,8 @@ class _BookSearchResultsState extends State<BookSearchResults> {
   bool _isWaiting = false;
 
   Future<List<Book>> futurePaginated(String search, int page) async {
-    final List<Book> books = await BooksRepository.searchBooks(
+    final booksProvider = Provider.of<BooksProvider>(context, listen: false);
+    final List<Book> books = await booksProvider.searchBooks(
       widget.searchQuery,
       page: page,
     );

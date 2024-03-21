@@ -1,6 +1,6 @@
 import 'package:books_search_app/src/configs/utilities/package.dart';
 import 'package:http/http.dart' as http;
-import '../feature/book_details/models/book_details.dart';
+import '../feature/details/models/book_details.dart';
 import '../feature/home/models/new_books_response_model.dart';
 
 class BooksRepository {

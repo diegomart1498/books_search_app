@@ -5,9 +5,11 @@ class HomePageBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final booksProvider = Provider.of<BooksProvider>(context, listen: false);
+
     return Align(
       child: FutureBuilder<List<Book>>(
-        future: BooksRepository.getLastestBooks(),
+        future: booksProvider.getLastestBooks(),
         builder: (context, snapshot) {
           if (snapshot.hasData) {
             final List<Book> firstTenBooks = snapshot.data!.sublist(0, 10);
